@@ -787,6 +787,7 @@ extern "C" {
     pub fn crocksdb_options_set_enable_multi_batch_write(options: *mut Options, v: bool);
     pub fn crocksdb_options_is_enable_multi_batch_write(options: *mut Options) -> bool;
     pub fn crocksdb_options_set_unordered_write(options: *mut Options, v: bool);
+    pub fn crocksdb_options_set_avoid_unnecessary_blocking_io(options: *mut Options, v: bool);
     pub fn crocksdb_options_set_allow_concurrent_memtable_write(options: *mut Options, v: bool);
     pub fn crocksdb_options_set_manual_wal_flush(options: *mut Options, v: bool);
     pub fn crocksdb_options_optimize_for_point_lookup(

@@ -1313,6 +1313,12 @@ impl DBOptions {
         }
     }
 
+    pub fn enable_avoid_unnecessary_blocking_io(&mut self, v: bool) {
+        unsafe {
+            crocksdb_ffi::crocksdb_options_set_avoid_unnecessary_blocking_io(self.inner, v);
+        }
+    }
+
     pub fn manual_wal_flush(&self, v: bool) {
         unsafe {
             crocksdb_ffi::crocksdb_options_set_manual_wal_flush(self.inner, v);
