@@ -1,7 +1,7 @@
 [submodule "rocksdb"]
 	path = librocksdb_sys/rocksdb
-	url = https://github.com/Connor1996/rocksdb.git
-	branch = seperate-lock
+	url = https://github.com/overvenus/rocksdb.git
+	branch = p99/optimization
 
 [submodule "titan"]
 	path = librocksdb_sys/libtitan_sys/titan

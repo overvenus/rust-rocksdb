@@ -128,6 +128,7 @@ fn link_cpp(build: &mut Build) {
 fn build_rocksdb() -> Build {
     let target = env::var("TARGET").expect("TARGET was not set");
     let target_os = env::var("CARGO_CFG_TARGET_OS").unwrap();
+    env::set_var("DEBUG", "true");
     let mut cfg = Config::new("rocksdb");
     if cfg!(feature = "encryption") {
         cfg.register_dep("OPENSSL").define("WITH_OPENSSL", "ON");
